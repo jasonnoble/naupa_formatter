@@ -11,10 +11,10 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.7
-      - name: Install Rubocop gem
-        run: gem install rubocop
+      - name: Install Gems
+        run: bundle install
       - name: Run Rubocop
-        run: rubocop app spec
+        run: bundle exec rubocop
   rspec-test:
     name: RSpec
     needs: rubocop-test
@@ -24,5 +24,7 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.7
+      - name: Install Gems
+        run: bundle install
       - name: Build and test with rspec
         run: bundle exec rspec

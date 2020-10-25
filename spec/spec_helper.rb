@@ -2,8 +2,7 @@
 
 require 'simplecov'
 
-SimpleCov.start 'gem' do
-  add_filter 'spec/'
+SimpleCov.start do
 end
 
 if ENV['CI'] == 'true'

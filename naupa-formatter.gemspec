@@ -20,6 +20,11 @@ Gem::Specification.new do |spec|
                    'Gemfile', 'Rakefile']
   spec.extra_rdoc_files = ['README.md']
 
+  spec.add_development_dependency 'codecov'
+  spec.add_development_dependency 'guard-bundler'
+  spec.add_development_dependency 'guard-rspec'
+  spec.add_development_dependency 'guard-rubocop'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-rspec'
+  spec.add_development_dependency 'simplecov'
 end
